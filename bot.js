@@ -9,7 +9,7 @@ require("dotenv").config(); // Load environment variables from .env file
 const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
 
 // Regular expression to match Spotify track links
-const spotifyRegex = /https:\/\/open\.spotify\.com\/track\/([a-zA-Z0-9]+)/;
+const spotifyRegex = /https:\/\/open\.spotify\.com\/(track|album)\/([a-zA-Z0-9]+)/;
 
 // Create temporary directory for downloads if it doesn't exist
 const tempDir = path.join(__dirname, "temp");
